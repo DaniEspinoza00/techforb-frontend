@@ -1,0 +1,26 @@
+<div class="login-card">
+    <h1>Portal de Monitoreo</h1>
+    <h3>Iniciar sesión</h3>
+    <div class="form-container">
+        <form [formGroup]="loginForm" (ngSubmit)="login()" action="">
+            <fieldset>
+                <legend>Usuario</legend>
+                <input type="text" formControlName="username" placeholder="Inserte su username">
+            </fieldset>
+            <fieldset>
+                <legend>Contraseña</legend>
+                <input type="password" formControlName="password" placeholder="Inserte su contraseña">
+            </fieldset>
+            <div class="options">
+                <div><span class="text">¿Olvidó su contraseña?</span></div>
+                <button mat-flat-button type="submit"><span>Iniciar Sesion</span></button>
+            </div>
+            <div class="terms-conditions">
+               <span>Protegido por reCAPTCHA y sujeto a la </span><a class="links" href="">Politica de Privacidad</a><span> y </span><a class="links" href="">Terminos y Condiciones</a> 
+            </div>
+            <div class="terms-conditions noAccount">
+                <span>¿No tienes cuenta?</span><a (click)="displayRegister()" class="links">Registrate</a>
+             </div>
+        </form>
+    </div>
+</div>

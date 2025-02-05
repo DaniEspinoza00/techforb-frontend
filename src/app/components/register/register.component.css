@@ -1,0 +1,66 @@
+/*dentro del form*/
+.form-container{
+    margin-top: 40px;
+}
+
+fieldset {
+    border-color: #fafafa6e;
+    border-radius: 15px;
+}
+
+legend {
+    color: #3232326e;
+}
+
+input {
+    font-size: 20px;
+    border: none;
+    outline: none;
+
+    &:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.options button[mat-flat-button] {
+    background-color: #33A3AA !important;
+    color: white !important;
+    border-radius: 15px;
+    padding: 15px 40px;
+    letter-spacing: normal;
+}
+
+.options div{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.options button[mat-flat-button] span{
+    font-weight: 300 !important;
+}
+
+.options, .terms-conditions, .noAccount{
+    margin-top: 12px;
+}
+
+
+.terms-conditions span,
+.text{
+    color: #3232326e;
+}
+.noAccount a {
+    padding-left: 20px;
+}
+
+.links{
+    color: #33A3AA;
+}
