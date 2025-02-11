@@ -1,0 +1,35 @@
+<div class="container mat-elevation-z4">
+    <div class="card-label">
+        <p>{{sensorName()}}</p>
+        <h2>{{sensorSum()}}</h2>
+    </div>
+    <!-- quizas poner un if en este div y darle las opciones de ok, alerta amarilla y alerta roja dependiendo el valorque tenga sensorIcon funcione -->
+    @if (sensorIcon() ==='ok') {
+    <div class="icon-wrapper ok">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#9DCD55">
+            <path d="M378-240.26 148.26-470l48.98-48.98L378-338.22l383.76-383.76L810.74-673 378-240.26Z" />
+        </svg>
+    </div>
+    }@else if (sensorIcon()==='media') {
+    <div class="icon-wrapper media">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#fdd971">
+            <path
+                d="M480.11-97.39q-34.2 0-58.65-24.47Q397-146.33 397-180.68q0-34.36 24.63-58.54 24.63-24.17 58.82-24.17 34.2 0 58.37 24.47Q563-214.46 563-180.1t-24.35 58.54q-24.35 24.17-58.54 24.17Zm-76.33-266v-496.39h152.44v496.39H403.78Z" />
+        </svg>
+    </div>
+    }@else if (sensorIcon()==='red') {
+    <div class="icon-wrapper red">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#fe3e3b">
+            <path
+                d="M27.56-112.65 480-894.7l452.44 782.05H27.56Zm127.18-73.57h650.52L480-748.13 154.74-186.22Zm329.44-51.91q13.15 0 22.61-9.64 9.47-9.65 9.47-22.8t-9.64-22.33q-9.65-9.19-22.8-9.19t-22.61 9.36q-9.47 9.36-9.47 22.51 0 13.15 9.64 22.62 9.65 9.47 22.8 9.47ZM454-348h60v-219.48h-60V-348Zm26-119.17Z" />
+        </svg>
+    </div>
+    }@else {
+    <div class="icon-wrapper disabled">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#fc965b"><path d="M256-181.91 181.91-256l224-224-224-224L256-778.09l224 224 224-224L778.09-704l-224 224 224 224L704-181.91l-224-224-224 224Z"/></svg>
+    </div>
+    }
+
+
+
+</div>

@@ -1,0 +1,45 @@
+:host{
+    background-color: #FBFCFC;
+    border-radius: 15px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.card-label p{
+    color: #3232326e;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.icon-wrapper{
+    width: 35px;
+    height: 35px;
+    padding: 20px;
+    border-radius: 100%;
+}
+
+.ok{
+    background-color: #e8f1f5;
+}
+
+.media{
+    background-color: #fffacd;
+}
+
+.red{
+    background-color: #facbc1;
+}
+
+.disabled{
+    background-color: #fbe3cb;
+}

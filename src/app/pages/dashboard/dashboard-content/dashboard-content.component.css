@@ -1,0 +1,28 @@
+:host{
+    width: 100%;
+    background-color: #e8f1f5;
+    padding: 3rem 3rem 2rem 3rem;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.notifications{
+    display: flex;
+    align-items: center;
+}
+
+.notifications-icons {
+    margin-right: 20px;
+    > svg{
+        margin: 0 10px;
+    }    
+}
+
+.card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}

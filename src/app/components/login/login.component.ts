@@ -32,7 +32,7 @@ export class LoginComponent {
             console.log(errorData);
           },
           complete: () => {
-            this.router.navigateByUrl('/login');
+            this.router.navigateByUrl('/dashboard');
             this.loginForm.reset
           }
         }

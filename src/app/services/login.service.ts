@@ -47,20 +47,6 @@ export class LoginService {
   get userToken():String{
     return this.currentUserData.value;
   }
-   
-   /* login(credentials:LoginRequest):Observable<any>{
-    return this.http.post<any>(environment.urlHost+"auth/login",credentials).pipe(
-      tap( (userData) => {
-        sessionStorage.setItem("token", userData.token);
-        this.currentUserData.next(userData.token);
-        this.currentUserLoginOn.next(true);
-        sessionStorage.setItem("userId", userData.user.id.toString());
-        this.userId.next(userData.user.id);
-      }),
-      map((userData)=> userData.token),
-      catchError(this.handleError)
-    );
-  } */
 
    logout():void{
     sessionStorage.removeItem("token");
@@ -68,8 +54,6 @@ export class LoginService {
     this.userData.next("");
     this.currentUserLoginOn.next(false);
   }
-
-
 
 
    private handleError(error:HttpErrorResponse){

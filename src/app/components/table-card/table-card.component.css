@@ -1,0 +1,26 @@
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.plant-details{
+    border: none;
+    color: #FBFCFC;
+    background-color: #33A3AA;
+    padding: 3px 15px;
+    border-radius: 5px;
+}
+
+.view-more{
+    border: none;
+    background-color:#FBFCFC
+}

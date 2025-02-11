@@ -4,8 +4,9 @@ import { LoginService } from '../../services/login.service';
 import { Router } from '@angular/router';
 import { LoginRequest } from '../../models/login-request';
 import {MatButtonModule} from '@angular/material/button';
-import { LoginComponent } from '../login/login.component';
-import { RegisterComponent } from '../register/register.component';
+import { LoginComponent } from '../../components/login/login.component';
+import { RegisterComponent } from '../../components/register/register.component';
+
 
 @Component({
   selector: 'app-home',

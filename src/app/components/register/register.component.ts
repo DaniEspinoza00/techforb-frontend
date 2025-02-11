@@ -20,7 +20,7 @@ export class RegisterComponent {
     password:[''],
     confirm:['']
   })
-
+//FALTA REGISTRAR UN USUARIO
   register() {
     throw new Error('Method not implemented.');
   }

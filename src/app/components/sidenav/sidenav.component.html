@@ -1,0 +1,8 @@
+<mat-sidenav-container [style.width]="hover() ? '250px' : '65px'">
+    <mat-sidenav opened mode="side" [style.width]="hover() ? '250px' : '65px'" (mouseenter)="hover.set(true)" (mouseleave)="hover.set(false)">
+        <!-- <app-sidenav-content [collapseImg]="collapseImg()"></app-sidenav-content> 
+         <button mat-icon-button><mat-icon>menu</mat-icon></button>-->
+         <app-custom-sidenav [hover]="hover()"></app-custom-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content class="content" [style.margin-left]="navWidth()"></mat-sidenav-content>
+</mat-sidenav-container>
