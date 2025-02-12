@@ -8,16 +8,24 @@
                     {{element[header.name]}}
                 }@else {
                 <div class="buttons">
-                    <button class="plant-details" (click)="plantDetails(element)">
-                        @if (!displayDetails) {
+                    <button mat-button class="plant-details" (click)="plantDetails(element)" [disabled]="isDisabled(element)">
+                        @if (!displayDetailsMap[element.id]) {
                           Ver planta  
                         }@else {
                             Dejar de ver
                         }
                         </button>
-                    <button class="view-more" mat-icon-button>
+                    <button class="view-more" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
                         <mat-icon>more_vert</mat-icon>
                     </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <span>Editar planta</span>
+                        </button>
+                        <button mat-menu-item>
+                          <span>Eliminar planta</span>
+                        </button>
+                      </mat-menu>
                 </div>
                 }
 
@@ -25,10 +33,10 @@
         </ng-container>
         }
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'selected-row': displayDetailsMap[row.id]}"></tr>
     </table>
     <!-- si se necesita poner un paginador, se puede agregar -->
 </div>
 <section>
-    <app-table-card-details [displayDetails]="displayDetails" [idPlant]="idPlant"></app-table-card-details>
+    <app-table-card-details [displayDetails]="displayDetailsMap[idPlant]" [idPlant]="idPlant" [plantName]="plantName" [plantCountry]="plantCountry"></app-table-card-details>
 </section>

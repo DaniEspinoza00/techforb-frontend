@@ -9,6 +9,7 @@ table {
 .buttons{
     display: flex;
     justify-content: end;
+    align-items: center;
     gap: 20px;
 }
 
@@ -23,4 +24,19 @@ table {
 .view-more{
     border: none;
     background-color:#FBFCFC
+}
+
+tr:hover{
+    background-color: #eef2f6;
+}
+
+.selected-row{
+    font-weight: 600;
+    background-color: #eef2f6;
+}
+
+.card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
 }

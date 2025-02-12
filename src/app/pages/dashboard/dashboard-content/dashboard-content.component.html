@@ -1,6 +1,6 @@
 <!-- Este es el dashboard principal donde se muestra toda la informacion -->
 
-<section>
+<section class="dashboard">
     <h3>Monitoreo global</h3>
     <div class="notifications">
         <div class="notifications-icons">
@@ -24,14 +24,14 @@
                 <circle cx="15.5" cy="5" r="4.5" fill="#28B3BD" />
             </svg>
         </div>
-        <h4>Dani</h4><!-- nombre del usuario -->
+        <h4>Techforb</h4><!-- nombre del usuario -->
     </div>
 </section>
-<section class="card-wrapper">
+<section class="dashboard card-wrapper">
     @for (item of sensorCardItem; track $index) {
         <app-card [sensorName]="item.key" [sensorSum]="item.value" [sensorIcon]="item.icon"></app-card>
     }
 </section>
-<div>
+<section class="table-card-wrapper">
     <app-table-card></app-table-card>
-</div>
+</section>
