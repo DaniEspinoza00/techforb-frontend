@@ -1,39 +1,34 @@
-section {
-    width: 100%;
+section{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: #FCFBFB;
+}
+.contenedor{
+    display: flex;
+    width: 80%;
 }
 
-.container {
-    width: 1440px;
-    position: relative;
-}
-/*primer div*/
-.welcome-image-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    position: relative;
-    height: 900px;
-    width: 796px;
+.img-container{
+    max-width: 900px;
+    overflow: hidden;
     background: linear-gradient(#33A3AA 100%, #107076 100%);
-    float: left;
-}
-
-img {
-    position: absolute;
-    opacity: 20% !important;
 }
 
 .welcome{
-    width: 65%;
-    margin-left: 7rem;
-    z-index: 10;
-}
-
-.welcome h1, .welcome h4, .welcome p, .welcome span{
-    color: #FBFCFC !important;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    color: #eef1f1;
+    font-size: smaller;
+    width: 30%;
+    >h1{
+        font-size: 40px;
+    }
+    >p{
+        font-size: 16px
+    };
 }
 
 .feature-card{
@@ -41,31 +36,43 @@ img {
     margin-top: 30px;
 }
 
-.features{
-    padding-left: 15px;
-}
-
-.features h4{
-    margin: 0;
-    font-weight: 400;
-}
-
-.features span{
-    font-size: 12px;
-}
-
-
-/*segundo div*/
-.login-container {
+.login-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 900px;
-    width: 675px;
-    background: #FBFCFC;
-    position: absolute;
-    left: 765px;
+    margin-left: -5rem;
+    padding: 40px;
     border-radius: 30px;
+    background: #eef1f1;
+    z-index: 1;
 }
 
+img{
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    opacity: 20% !important;
+}
 
+@media screen and (max-width:1150px) {
+    
+    .welcome{
+        top: 30%;
+        h1{
+            font-size: 30px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .img-container{
+        display: none;
+    }
+    .login-container{
+        margin-left: 0;
+        border: 1px solid #b8bdbd
+    }
+}

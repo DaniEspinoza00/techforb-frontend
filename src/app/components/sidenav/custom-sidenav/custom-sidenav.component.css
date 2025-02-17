@@ -7,6 +7,29 @@
     }
 }
 
+a[mat-list-item] {
+
+    span[matListItemTitle], mat-icon {
+        transition: color 0.3s ease;/*creo que falta el color*/
+      }
+
+    &:hover {
+      span[matListItemTitle], mat-icon{
+        color: #000000;
+      }
+    }
+  }
+
+  .active-link span {
+    color: #000000 !important;
+    font-weight: 500;
+  }
+  
+  .active-link mat-icon {
+    color: #000000 !important;
+  }
+
+
 .header-text{
     > h2{
         margin: 0;
@@ -18,3 +41,8 @@
         font-size: 12px;
     }
 }
+
+.icon-label{
+    font-size: 14px;
+}
+

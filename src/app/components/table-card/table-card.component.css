@@ -1,42 +1,120 @@
 .table-container {
     margin-top: 20px;
+    background-color: #FBFCFC;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.title {
+    background-color: inherit;
+    padding: 1rem;
+}
+
+::ng-deep .mat-mdc-paginator-icon {
+    fill: #33A3AA !important;
+}
+
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+    border-color: #33A3AA !important;
+    border-width: 1px !important;
+}
+
+.createPlantButton {
+    border: 1px solid #33A3AA !important;
+    letter-spacing: normal;
 }
 
 table {
     width: 100%;
 }
 
-.buttons{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 20px;
+.mat-mdc-table {
+    background-color: #FBFCFC !important;
+    max-height: 250px !important;
+    overflow: auto !important;
 }
 
-.plant-details{
+.mat-mdc-header-cell {
+    border-bottom-style: none !important;
+}
+
+.mat-mdc-cell {
+    border-bottom-style: none !important;
+}
+
+.place {
+    justify-content: end;
+}
+
+.plant-details {
     border: none;
-    color: #FBFCFC;
     background-color: #33A3AA;
     padding: 3px 15px;
     border-radius: 5px;
 }
 
-.view-more{
+.view-more {
     border: none;
-    background-color:#FBFCFC
 }
 
-tr:hover{
+tr:hover {
     background-color: #eef2f6;
 }
 
-.selected-row{
+.selected-row {
     font-weight: 600;
     background-color: #eef2f6;
 }
 
-.card-wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
+
+@media screen and (max-width:767px) {
+
+    .addPlant{
+        display: block !important;
+        border-radius: 50%;
+        border: 1px #33A3AA solid;
+        >mat-icon{
+            color: #33a3aa !important;
+        }
+    }
+
+    .createPlantButton{
+        display: none;
+    }
+
+    .viewPlant{
+        display: block !important;
+    }
+
+    ::ng-deep .mat-mdc-header-row{
+        display: none;
+    }
+
+    ::ng-deep .mat-mdc-paginator-page-size{
+        display: none !important;
+    }
+
+    ::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+    ::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+    ::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+        display: none;
+    }
+
+    ::ng-deep .mdc-data-table__cell, .mdc-data-table__header-cell{
+        padding: 0 8px 0 8px !important;
+    }
+
+    ::ng-deep .mat-mdc-paginator-range-label{
+        display: none !important;
+    }
+    .plant-details{
+        display: none;
+    }
+
 }

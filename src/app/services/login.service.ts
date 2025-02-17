@@ -56,13 +56,15 @@ export class LoginService {
   }
 
 
-   private handleError(error:HttpErrorResponse){
-    if(error.status===0){
-      console.error('An error has ocurred ', error.error);
+  private handleError(error: HttpErrorResponse) {
+    if (error.status === 0) {
+      return throwError(() => new Error('No se pudo conectar con el servidor.'));
+    } else if (error.status === 401) {
+      return throwError(() => new Error('Usuario o contraseña incorrectas.'));
+    } else if (error.status === 403) {
+      return throwError(() => new Error('Acceso denegado.'));
+    } else {
+      return throwError(() => new Error('Algo salió mal. Por favor nuevamente.'));
     }
-    else{
-      console.error('Backend sent status code', error);
-    }
-    return throwError(()=> new Error('Something happened, please try again'));
   }
 }

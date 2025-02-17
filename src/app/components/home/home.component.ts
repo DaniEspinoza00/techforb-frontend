@@ -1,9 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, input, OnInit, signal } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { LoginService } from '../../services/login.service';
-import { Router } from '@angular/router';
-import { LoginRequest } from '../../models/login-request';
-import {MatButtonModule} from '@angular/material/button';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { LoginComponent } from '../../components/login/login.component';
 import { RegisterComponent } from '../../components/register/register.component';
 

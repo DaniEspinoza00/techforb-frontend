@@ -9,7 +9,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     box-sizing: border-box;
     border-radius: inherit;
     overflow: hidden;
@@ -42,4 +42,23 @@
 
 .disabled{
     background-color: #fbe3cb;
+}
+
+@media screen and (max-width:767px) {
+    .container{
+        padding: 5px;
+        align-items: center;
+    }
+
+    .card-label{
+        margin-left: 20px;
+    }
+    .icon-wrapper{
+        margin-right: 20px;
+    }
+
+    .icon-wrapper, svg{
+        height: 25px;
+        width: 25px;
+    }
 }

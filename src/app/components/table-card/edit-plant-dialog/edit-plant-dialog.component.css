@@ -1,0 +1,75 @@
+.dialog-body {
+    padding: 2rem;
+
+    >h4 {
+        margin-bottom: 30px;
+    }
+}
+
+.new-plant-form h4 {
+    color: #3232326e
+}
+
+.input-fields {
+    display: flex;
+    gap: 20px;
+}
+
+.fields {
+    width: 100%;
+}
+
+.disabled-fieldset {
+    padding: 0;
+}
+
+.disabled {
+    height: 40px;
+    margin-left: 10px;
+}
+
+
+fieldset {
+    border-color: #fafafa6e;
+    border-radius: 15px;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+
+    &:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+select {
+    border: none;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.mdc-dialog__surface {
+    /*no funciona*/
+    border-radius: 15px;
+}
+
+.plant-details[mat-flat-button] {
+    background-color: #33A3AA !important;
+    color: white !important;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 30px;
+    letter-spacing: normal;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}

@@ -1,0 +1,11 @@
+<section class="dialog-body">
+    <div class="confirm">
+        <h4>¿Desea eliminar la siguiente planta?</h4>
+        <p>{{data.country}} - {{data.name}}</p>
+        <div class="buttons-container">
+            <button class="plant-details" mat-flat-button type="button" (click)="close()"><span>Cancelar</span></button>
+            <button class="plant-details" mat-flat-button type="button" (click)="deletePlant(data.id)"><span>Eliminar</span></button>
+        </div>
+    </div>
+
+</section>

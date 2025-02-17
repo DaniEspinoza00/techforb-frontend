@@ -24,14 +24,42 @@
                 <circle cx="15.5" cy="5" r="4.5" fill="#28B3BD" />
             </svg>
         </div>
-        <h4>Techforb</h4><!-- nombre del usuario -->
+        <h4>{{username}}</h4>
     </div>
+
+
+    <div class="menu-container">
+        <button class="menu" mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            @for (item of menuItem; track $index) {
+                @if (item.icon==='logout') {
+                <button mat-menu-item (click)="logout()">
+                    <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+                    <span matListItemTitle>{{item.label}}</span>
+                </button>
+                }@else {
+                <button mat-menu-item [routerLink]="item.route">
+                    <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+                    <span matListItemTitle>{{item.label}}</span>
+                </button>
+                }
+                }
+          </mat-menu>
+          <img [width]="80" [height]="80" src="./assets/images/techforblogo.png"
+        alt="">
+          <button class="menu" mat-icon-button><mat-icon>notifications</mat-icon></button>
+    </div>
+
+    
 </section>
+<h4 style="display: none;">Resumen de la planta</h4>
 <section class="dashboard card-wrapper">
     @for (item of sensorCardItem; track $index) {
         <app-card [sensorName]="item.key" [sensorSum]="item.value" [sensorIcon]="item.icon"></app-card>
     }
 </section>
 <section class="table-card-wrapper">
-    <app-table-card></app-table-card>
+    <app-table-card (updateHeaderCard)="updateHeader()"></app-table-card>
 </section>

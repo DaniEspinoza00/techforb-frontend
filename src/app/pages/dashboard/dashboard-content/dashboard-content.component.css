@@ -1,28 +1,80 @@
-:host{
+:host {
     width: 100%;
     background-color: #e8f1f5;
-    padding: 3rem 3rem 2rem 3rem;
+    padding: 1rem 3rem 1rem 3rem;
 }
 
-.dashboard{
+.dashboard {
     display: flex;
     justify-content: space-between;
 }
 
-.notifications{
+.notifications {
     display: flex;
     align-items: center;
 }
 
 .notifications-icons {
     margin-right: 20px;
-    > svg{
+
+    >svg {
         margin: 0 10px;
-    }    
+    }
 }
 
-.card-wrapper{
+.menu-container{
+    display: none;
+}
+
+.card-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
+}
+
+@media screen and (max-width:767px) {
+    :host {
+        padding: 10px;
+    }
+
+    .dashboard {
+        >h3 {
+            display: none;
+        }
+
+        >.notifications {
+            display: none;
+        }
+    }
+
+
+    ::ng-deep.mat-mdc-menu-panel {
+        min-width: 350px !important;
+    }
+
+    .menu-container {
+        display: block;
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+
+    .menu {
+        border: 0;
+        background-color: inherit;
+    }
+
+    .mat-mdc-menu-item {
+        padding: 20px;
+    }
+
+    h4 {
+        display: block !important;
+    }
+
+    .card-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 }

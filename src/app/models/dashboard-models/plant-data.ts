@@ -1,4 +1,4 @@
-export interface Plant{
+export interface plantData{
     id:number,
     country:string,
     name:string,

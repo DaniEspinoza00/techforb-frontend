@@ -1,0 +1,106 @@
+<section class="dialog-body">
+    <h4>Editar planta</h4>
+
+    <form [formGroup]="editForm" class="new-plant-form" action="" (ngSubmit)="editPlant()">
+        <div class="input-fields">
+            <div class="fields">
+                <h4>Nombre planta</h4>
+                <fieldset class="disabled-fieldset">
+                    <input class="disabled" type="text" formControlName="country" placeholder="{{data.name}}">
+                </fieldset>
+            </div>
+            <div class="fields">
+                <h4>País</h4>
+                <fieldset class="disabled-fieldset">
+                    <input class="disabled" type="text" formControlName="name" placeholder="{{data.country}}">
+                </fieldset>
+            </div>
+        </div>
+        <div class="input-fields">
+            <div class="fields">
+                <h4>Cantidad de lecturas</h4>
+                <fieldset>
+                    <input type="number" formControlName="lectures" placeholder="Ingrese un valor" min="1" max="9999">
+                </fieldset>
+                @if (editForm.get('lectures')?.invalid && editForm.get('lectures')?.touched) {
+                <div class="form-error">
+                    @if (editForm.get('lectures')?.errors?.['required']) {
+                        <span>Debe ingresar un valor</span>
+                    }
+                    @if (editForm.get('lectures')?.errors?.['min']) {
+                        <span>Debe ser mayor a 0</span>
+                    }
+                    @if (editForm.get('lectures')?.errors?.['max']) {
+                        <span>Debe ser como maximo xxxx</span>
+                    }
+                </div>
+                }
+
+            </div>
+            <div class="fields">
+                <h4>Cantidad de lecturas</h4>
+                <fieldset>
+                    <input type="number" formControlName="lectures2" placeholder="Ingrese un valor" min="1" max="9999">
+                </fieldset>
+                @if (editForm.get('lectures2')?.invalid && editForm.get('lectures2')?.touched) {
+                    <div class="form-error">
+                        @if (editForm.get('lectures2')?.errors?.['required']) {
+                            <span>Debe ingresar un valor</span>
+                        }
+                        @if (editForm.get('lectures2')?.errors?.['min']) {
+                            <span>Debe ser mayor a 0</span>
+                        }
+                        @if (editForm.get('lectures2')?.errors?.['max']) {
+                            <span>Debe ser como maximo xxxx</span>
+                        }
+                    </div>
+                    }
+            </div>
+        </div>
+        <div class="input-fields">
+            <div class="fields">
+                <h4>Alertas medias</h4>
+                <fieldset>
+                    <input type="number" formControlName="media" placeholder="Ingrese un valor" min="1" max="9999">
+                </fieldset>
+                @if (editForm.get('media')?.invalid && editForm.get('media')?.touched) {
+                    <div class="form-error">
+                        @if (editForm.get('media')?.errors?.['required']) {
+                            <span>Debe ingresar un valor</span>
+                        }
+                        @if (editForm.get('media')?.errors?.['min']) {
+                            <span>Debe ser mayor a 0</span>
+                        }
+                        @if (editForm.get('media')?.errors?.['max']) {
+                            <span>Debe ser como maximo xxxx</span>
+                        }
+                    </div>
+                    }
+            </div>
+            <div class="fields">
+                <h4>Alertas rojas</h4>
+                <fieldset>
+                    <input type="number" formControlName="red" placeholder="Ingrese un valor" min="1" max="9999">
+                </fieldset>
+                @if (editForm.get('red')?.invalid && editForm.get('red')?.touched) {
+                    <div class="form-error">
+                        @if (editForm.get('red')?.errors?.['required']) {
+                            <span>Debe ingresar un valor</span>
+                        }
+                        @if (editForm.get('red')?.errors?.['min']) {
+                            <span>Debe ser mayor a 0</span>
+                        }
+                        @if (editForm.get('red')?.errors?.['max']) {
+                            <span>Debe ser como maximo xxxx</span>
+                        }
+                    </div>
+                    }
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <button class="plant-details" mat-flat-button type="button" (click)="close()"><span>Cancelar</span></button>
+            <button class="plant-details" mat-flat-button type="submit"><span>Editar</span></button>
+        </div>
+    </form>
+</section>

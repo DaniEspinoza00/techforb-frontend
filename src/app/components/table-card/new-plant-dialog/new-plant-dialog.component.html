@@ -1,0 +1,46 @@
+<section class="dialog-body">
+   <h4>Crear nueva planta</h4>
+
+<form [formGroup]="createPlant" (ngSubmit)="createNewPlant()" class="new-plant-form" action="">
+    <h4>Nombre planta</h4>
+    <fieldset>
+        <input type="text" formControlName="name" placeholder="Ingrese nombre">
+    </fieldset>
+    @if (createPlant.get('name')?.invalid && createPlant.get('name')?.touched) {
+        <div class="form-error">
+            @if (createPlant.get('name')?.errors?.['required']) {
+                <span>Debe ingresar un nombre</span>
+            }
+        </div>
+    }
+    <h4>País</h4>
+    <fieldset>
+          <select formControlName="country" name="country" id="country">
+            <option value="" selected disabled>Seleccione el país</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Chile">Chile</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Venezuela">Venezuela</option>
+          </select>
+    </fieldset>
+    @if (createPlant.get('country')?.invalid && createPlant.get('country')?.touched) {
+        <div class="form-error">
+            @if (createPlant.get('country')?.errors?.['required']) {
+                <span>Debe ingresar un país</span>
+            }
+        </div>
+    }
+    <div style="display: flex; justify-content: space-evenly; margin-top: 20px;">
+        <button class="plant-details" mat-flat-button type="button" (click)="close()"><span>Cancelar</span></button>
+        <button class="plant-details" mat-flat-button type="submit"><span>Crear</span></button>
+    </div>
+</form> 
+</section>

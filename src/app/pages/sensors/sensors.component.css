@@ -1,0 +1,56 @@
+section{
+    padding: 3rem;
+    background-color: #e8f1f5;
+    height: 100vh;
+}
+
+.sensor-page-header{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.back-button{
+    border-color: #33A3AA !important;
+    letter-spacing: normal;
+}
+
+table{
+    margin-top: 30px;
+}
+
+tr:hover {
+    background-color: #eef2f6;
+}
+
+::ng-deep .mat-mdc-paginator-icon {
+    fill: #33A3AA !important;
+}
+
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+    border-color: #33A3AA !important;
+    border-width: 1px !important;
+}
+
+@media screen and (max-width:767px) {
+    .sensor-page-header{
+        flex-direction: column;
+    }
+    .back-button{
+        margin-top: 20px;
+        width: 60%;
+    }
+
+    span{
+        font-size: 10px;
+    }
+
+    ::ng-deep .mat-mdc-header-row{
+        display: none;
+    }    
+    ::ng-deep .mdc-data-table__cell, .mdc-data-table__header-cell{
+        padding: 0 8px 0 8px !important;
+    }
+}

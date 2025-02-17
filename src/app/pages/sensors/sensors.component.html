@@ -1,0 +1,52 @@
+<section>
+    <div class="sensor-page-header">
+      <h3>Listado de Sensores</h3>
+    <button mat-stroked-button class="back-button" [routerLink]="'/dashboard'"><mat-icon>arrow_back</mat-icon> <span>Volver a la pagina principal</span></button>  
+    </div>
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" >
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="ID Sensor">
+                <th mat-header-cell *matHeaderCellDef> ID Sensor </th>
+                <td mat-cell *matCellDef="let element"> {{element.idSensor}} </td>
+            </ng-container>
+    
+            <!-- Name Column -->
+            <ng-container matColumnDef="Nombre">
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                <td mat-cell *matCellDef="let element"> {{element.sensorName}} </td>
+            </ng-container>
+    
+            <!-- Weight Column -->
+            <ng-container matColumnDef="Lecturas ok">
+                <th mat-header-cell *matHeaderCellDef> Lecturas ok </th>
+                <td mat-cell *matCellDef="let element"> {{element.okLectures}} </td>
+            </ng-container>
+    
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="Alerta media">
+                <th mat-header-cell *matHeaderCellDef> Alerta media </th>
+                <td mat-cell *matCellDef="let element"> {{element.mediaRangeAlert}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="Alerta roja">
+                <th mat-header-cell *matHeaderCellDef> Alerta roja </th>
+                <td mat-cell *matCellDef="let element"> {{element.redAlert}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="ID Planta">
+                <th mat-header-cell *matHeaderCellDef> ID Planta </th>
+                <td mat-cell *matCellDef="let element"> {{element.idPlant}} </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10]"
+                     showFirstLastButtons
+                     aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+    
+</section>

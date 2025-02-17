@@ -1,4 +1,5 @@
 /*dentro del form*/
+
 .form-container{
     margin-top: 40px;
 }
@@ -16,6 +17,7 @@ input {
     font-size: 20px;
     border: none;
     outline: none;
+    background-color: #eef1f1;
 
     &:focus {
         border: none;
@@ -63,4 +65,30 @@ input {
 
 .links{
     color: #33A3AA;
+}
+
+@media screen and (max-width:1150px) {
+    h1{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    legend{
+        font-size: smaller;
+    }
+    input{
+        font-size: 15px;
+    }
+    button{
+        padding: 0;
+    }
+    span, a{
+        font-size: 10px;
+    }
+
+    .options{
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }

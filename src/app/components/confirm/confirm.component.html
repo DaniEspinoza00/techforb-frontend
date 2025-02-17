@@ -1,0 +1,19 @@
+<section class="success-dialog">
+    <svg width="37" height="26" viewBox="0 0 37 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M35.665 1L12.0631 24.6019L1.33496 13.8738" stroke="#33A3AA" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+    </svg>
+    @if (data==='registrado') {
+    <mat-dialog-content>
+        <p>Usuario {{data}} con exito</p>
+    </mat-dialog-content>
+    }@else if (data==='Sensor') {
+        <mat-dialog-content>
+            <p>{{data}} editado con exito</p>
+        </mat-dialog-content>
+    }@else {
+    <mat-dialog-content>
+        <p>Planta {{data}} con exito.</p>
+    </mat-dialog-content>
+    }
+</section>

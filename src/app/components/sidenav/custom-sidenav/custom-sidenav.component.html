@@ -1,5 +1,6 @@
 <div class="sidenav-header">
-    <img [width]="imageSize" [height]="imageSize" src="./assets/images/techforblogo.png" alt=""><!-- pensar en la posibilidad de ponerle transition -->
+    <img [width]="imageSize" [height]="imageSize" src="./assets/images/techforblogo.png"
+        alt="">
     @if (hover()) {
     <div class="header-text">
         <h2>Techforb</h2>
@@ -9,10 +10,19 @@
 
     <mat-nav-list>
         @for (item of menuItem; track $index) {
-        <a mat-list-item [routerLink]="item.route">
+        @if (item.icon==='logout') {
+        <a mat-list-item (click)="logout()" routerLinkActive="active-link"
+            #rla="routerLinkActive" [activated]="rla.isActive">
             <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
             <span matListItemTitle>{{item.label}}</span>
         </a>
+        }@else {
+        <a mat-list-item [routerLink]="item.route" routerLinkActive="active-link" #rla="routerLinkActive"
+            [activated]="rla.isActive">
+            <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+            <span matListItemTitle>{{item.label}}</span>
+        </a>
+        }
         }
     </mat-nav-list>
 </div>
